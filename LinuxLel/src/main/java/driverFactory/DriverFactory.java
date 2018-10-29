@@ -14,21 +14,24 @@ public class DriverFactory {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", false);
 
-        String browserTypeName = System.getProperty(BROWSERTYPE);
+        //String browserTypeName = System.getProperty(BROWSERTYPE);
+        //String browserTypeName12 = System.getProperty("browserType12");
+
+        String browserTypeName = "Chrome";
 
         switch (browserTypeName){
             case "Firefox":
                 capabilities.setBrowserName("firefox");
                 capabilities.setVersion("61.0");
                 return new RemoteWebDriver(
-                        URI.create("http://localhost:4444/wd/hub").toURL(),
+                        URI.create("http://13.93.39.91:4444/wd/hub").toURL(),
                         capabilities
                 );
             case "Chrome":
                 capabilities.setBrowserName("chrome");
                 capabilities.setVersion("69.0");
                 return new RemoteWebDriver(
-                        URI.create("http://localhost:4444/wd/hub").toURL(),
+                        URI.create("http://13.93.39.91:4444/wd/hub").toURL(),
                         capabilities
                 );
 

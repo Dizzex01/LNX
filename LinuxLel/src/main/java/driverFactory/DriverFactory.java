@@ -21,14 +21,14 @@ public class DriverFactory {
                 capabilities.setBrowserName("firefox");
                 capabilities.setVersion("61.0");
                 return new RemoteWebDriver(
-                        URI.create("http://65.52.132.103:4444/wd/hub").toURL(),
+                        URI.create("http://localhost:4444/wd/hub").toURL(),
                         capabilities
                 );
             case "Chrome":
                 capabilities.setBrowserName("chrome");
                 capabilities.setVersion("69.0");
                 return new RemoteWebDriver(
-                        URI.create("http://65.52.132.103:4444/wd/hub").toURL(),
+                        URI.create("http://localhost:4444/wd/hub").toURL(),
                         capabilities
                 );
 
